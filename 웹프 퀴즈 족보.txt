@@ -1,0 +1,201 @@
+웹프 온라인 퀴즈
+
+Q1. 데이터 베이스에 데이터를 삽입, 수정, 삭제, 검색 하기 위한 질의 언어를 무엇이라 하는가?
+1. SQL (o)
+2. Query
+3. ORACLE
+4. DBMS
+
+Q2. 폼의 데이터를 입력받을 때 여러 줄을 입력할 수 있는 태그는 무엇인가?
+1. combobox
+2. textarea (o)
+3. checkbox
+4. select
+
+Q3. 자바 프로그램 안에서 SQL을 실행하기 위해 데이터베이스를 연결해주는 응용 프로그램 인터페이스를 담당하는 것은 무엇인가?
+1. JDBC (o)
+2. SQL
+3. ORACLE
+4. ODBC
+
+Q4. HTML에서 좌우 칸을 합칠 때 사용하는 태그는 무엇인가?
+1. rowspan (o)
+2. postspan
+3. colspan
+4. packspan
+
+Q5. 폼에서 입력 받은 정보를 전달받을 때 사용하는 것은?
+1. request.getData()
+2. request.getValue()
+3. request.getParameter() (o)
+4. post.getParameter()
+
+Q6. 브라우저의 주소창에 ? 기호와 함께 정보를 전송하는 방식은 무엇인가?
+1. Get 방식 (o)
+2. Package 방식
+3. Post 방식
+4. Import 방식
+
+Q7. Applet 설명 중 잘못된 것은?
+1. 소규모 애니메이션, 그림그리기 등 작은 기능을 처리하는 프로그램이다
+2. 클라이언트가 요청한 작업을 서버에서 실행 한 후 결과만을 클라이언트로 돌려준다 (o)
+3. 현재 HTML5, CSS, jQuery 등이 사용되고 있다
+4. 웹에서 작동하도록 작성된 작은 프로그램이다
+
+Q8. Java 언어로 이루어진 클래스 파일을 무엇이라 하는가?
+1. Servlet (o)
+2. Thread
+3. Applet
+4. Component
+
+Q9. 다음 설명 중 틀린 것은?
+1. JSP 주석은 소스 보기하면 보인다. (o)
+2. 한줄 주석은 // 이다.
+3. 여러 줄 주석은 /* ...... */ 를 사용한다.
+4. HTML 주석은 소스 보기하면 보인다.
+
+Q10. 클라이언트가 요청한 문서가 존재하지 않음을 나타내는 상태 코드는 무엇인가?
+1. 404 (o)
+2. 403
+3. 401
+4. 402
+
+Q11. MVC 패턴에 해당되지 않는 것은?
+1. Model
+2. View
+3. Data (o)
+4. Control
+
+Q12. URL 형식에 포함되지 않는 것은 무엇인가?
+1. 서버주소
+2. 포트번호
+3. 사용자명 (o)
+4. 프로토콜
+
+Q13. SQL에서 DML이 아닌 것은 무엇인가?
+1. UPDATE
+2. INSERT
+3. SUSPEND (o)
+4. SELECT
+
+Q14. SQL에서 DDL이 아닌 것은 무엇인가?
+1. DROP
+2. UPDATA (o)
+3. ALTER
+4. CREATE
+
+Q15. session.setMaxInactiveInterval()에서 매개변수의 단위는 무엇인가?
+1. 분
+2. 밀리초
+3. 시간
+4. 초 (o)
+
+Q16. 웹에서 데이터를 입력 받을 때 사용하는 태그는?
+1. get box
+2. radio box
+3. text box (o)
+4. post box
+
+Q17. 클라이언트가 요청한 정보를 서버에서 가공하여 다시 클라이언트로 보내는 것을 무엇이라 하는가?
+1. reponse (o)
+2. post
+3. request
+4. get
+
+Q18. 다음 순서도 그림은 제어문 중에서 어느 것을 나타내는가?
+<그림>
+1. for 문
+2. while 문 (o)
+3. do - while 문
+4. if 문
+
+Q19. 하나의 웹 어플리케이션과 관련된 전체 영역에서 유효한 객체를 무엇이라 하는가?
+1. Page 객체
+2. Application 객체 (o)
+3. Request 객체
+4. Session 객체
+
+Q20. 데이터 전송하는 Get 방식 중 설명이 틀린 것은 무엇인가?
+1. 비교적 적은 양의 데이터를 빠르게 전송할 수 있다.
+2. 전송하는 데이터 양에 제한이 있다.
+3. HTTP 헤더 뒤에 입력 스트링 형태로 전송된다 (o)
+4. 데이터는 URL 뒤에 추가되어 전송된다
+
+Q21. 여러개의 정보중에서 여러개를 선택할 때 사용하는 태그는?
+1. getbox
+2. checkbox (o)
+3. textbox
+4. radiobox
+
+Q22. 입력된 내용을 Action이 지정하는 JSP파일에 전달하기 위한 것은 무엇인가?
+1. button
+2. submit (o)
+3. click
+4. reset
+
+Q23. 한번의 클라이언트 요청에 하나의 JSP 페이지에서만 유효한 객체는 무엇인가?
+1. Page 객체 (o)
+2. Session 객체
+3. Request 객체
+4. Application 객체
+
+Q24. 연결이 차단되었을 때 지속적으로 연결정보를 유지하려는 수단으로서 서버에서 생성하고, 클라이언트에 저장하는 객체는 무엇인가?
+1. 쿠키 (o)
+2. 프로토콜
+3. 프로세스
+4. 세션
+
+Q25. 클라이언트 정보가 서버와 연결이 종료될 때까지 서버에 저장되는 객체로서 보안에 강점이 있으나 서버에 부담을 줄 수 있는 객체는 무엇인가?
+1. Cookies
+2. Session (o)
+3. Application
+4. Request
+
+Q26. JSP에서 out.println(sum) 과 같은 결과를 나타내는 것은 무엇인가?
+1. printf(sum)
+2. Console.Writeline(sum)
+3. cout(sum)
+4. <%= sum%> (o)
+
+Q27. Session 값을 불러올 때 사용하는 것은 무엇인가?
+1. removeAttribute()
+2. setAttribute()
+3. getAttribute() (o)
+4. getMaxInactiveInterval()
+
+Q28. 게시판에 글 작성할 때 최근 글이 맨위로 올라오게 하려면 어느 정렬 방식을 사용해야 하나?
+1. UPDATE
+2. SUSPEND
+3. DESC (o)
+4. ASC
+
+Q29. 로그인하고 나면 로그인 정보를 서버에 저장한 후, 다른 요청이 있으면 로그인 정보를 조회하여 응답을 결정하는 객체는 무엇인가?
+1. 세션 (o)
+2. 프로세스
+3. 프로토콜
+4. 쿠키
+
+Q30. getParameterValues()의 리턴 타입은 무엇인가?
+1. int
+2. string
+3. string[] (o)
+4. float
+
+Q31. 브라우저에는 아무 모양이 나오지 않지만, Action 이 지정하는 JSP 파일에 전달할 값이 있을 경우 Value를 이용하여 값을 지정해 줄 수 있는 태그는?
+1. submit
+2. caption
+3. hidden (o)
+4. reset
+
+Q32. 다음 순서도 그림은 제어문 중에서 어느 것을 나타내는가?
+<그림>
+1. for 문 (o)
+2. do - while 문
+3. while 문
+4. if 문
+
+Q33. HTML 문서 내에 Java 언어를 삽입한 문서를 무엇이라 하는가?
+1. XML
+2. JAVA
+3. HTML
+4. JSP (o)
