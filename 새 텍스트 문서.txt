@@ -1,0 +1,1954 @@
+Read() : ÇÏ³ªÀÇ ¹®ÀÚ¸¦ ÀÐ°í Á¤¼öÇüÀ¸·Î º¯È¯
+ReadLine() : ÇÑ ¶óÀÎÀ» ÀÐ¾î string ÇüÀ¸·Î º¯È¯
+----------------------------------------------------------------------------
+[Çüº¯È¯]
+string s = "123";
+            float f = 321;
+            float h = Convert.ToInt16(s) + f;
+
+int  a = 1234;
+string  k = a.ToString();
+Á¤¼ö - ¹®ÀÚ¿­
+
+int a = 1234;
+string  k = Convert.ToString(a);
+Á¤¼ö - ¹®ÀÚ¿­
+
+string a=¡°1234¡±;
+int  k =    int.Parse(a)
+¹®ÀÚ¿­ - Á¤¼ö
+----------------------------------------------------------------------------
+[ÀÚ¸® Ç¥½ÃÀÚ]
+Console.WriteLine("{0} + {1} = {2}", a, b, hap);
+Console.WriteLine(a + " + " + b +" = " + hap);
+----------------------------------------------------------------------------
+[¹®ÀÚ¿­ °áÇÕ]
+Console.Write("Ã¹¹øÂ° ¹®ÀÚ¿­ : ");
+            string s = Console.ReadLine();
+            Console.Write("µÎ¹øÂ° ¹®ÀÚ¿­ : ");
+            string k = Console.ReadLine();
+            Console.Write("¹®ÀÚ¿­ ÇÕ : {0}",s+k);
+----------------------------------------------------------------------------
+[¼ýÀÚ¸ÂÃß±â]
+int a = 44, h=0;
+            while (true)
+            {
+                Console.Write("1~100 »çÀÌ ¼ýÀÚ ÀÔ·Â: ");
+                int s = Convert.ToInt16(Console.ReadLine());
+
+                if (s > 100 || s < 0)
+                {
+                    Console.WriteLine("´Ù½Ã ÀÔ·ÂÇÏ¼¼¿ä! ");
+                    continue;
+                }
+                h += 1;
+                if (s == a)
+                {
+                    Console.WriteLine("Á¤´ä! ");
+                    Console.WriteLine("½Ãµµ È½¼ö : {0} ",h);
+                    break;
+                }
+                if (s < a)
+                {
+                    Console.WriteLine("´õ Ä¿ ");
+                   
+                }
+                else
+                {
+                    Console.WriteLine("´õ ÀÛ¾Æ ");
+                    
+                }
+            }
+----------------------------------------------------------------------------
+[¼ýÀÚÄûÁî·£´ý] - Å¬·¡½º ³ª´²¼­ ¤¡¤¡
+ Random a = new Random();
+            int num = a.Next(0, 100);
+            int h = 0;
+            while (true)
+            {
+                Console.Write("1~100 »çÀÌ ¼ýÀÚ ÀÔ·Â: ");
+                int s = Convert.ToInt16(Console.ReadLine());
+
+                if (s > 100 || s < 0)
+                {
+                    Console.WriteLine("´Ù½Ã ÀÔ·ÂÇÏ¼¼¿ä! ");
+                    continue;
+                }
+                h += 1;
+                if (s == num)
+                {
+                    Console.WriteLine("Á¤´ä! ");
+                    Console.WriteLine("½Ãµµ È½¼ö : {0} ", h);
+                    break;
+                }
+                if (s < num)
+                    Console.WriteLine("´õ Ä¿ ");
+                else
+                    Console.WriteLine("´õ ÀÛ¾Æ ");
+            }
+----------------------------------------------------------------------------
+[Á¶°Ç ¿¬»êÀÚ]
+max = x > y ? x : y ;
+----------------------------------------------------------------------------
+[ÃÖ´ëÃÖ¼Ò]
+int max = 0, min = 0;
+            Console.Write("¼ýÀÚÀÔ·Â : ");
+            int a = Convert.ToInt16(Console.ReadLine());
+            Console.Write("¼ýÀÚÀÔ·Â : ");
+            int b = Convert.ToInt16(Console.ReadLine());
+            Console.Write("¼ýÀÚÀÔ·Â : ");
+            int c = Convert.ToInt16(Console.ReadLine());
+            if (a > b)
+            {
+                max = a;
+                min = b;
+            }
+            else
+            {
+                max = b;
+                min = a;
+            }
+            if (max > c)
+            {
+                if (min > c)
+                    min = c;
+            }
+            else
+            {
+                max = c;
+            }
+            Console.Write("ÃÖ´ë : {0} ÃÖ¼Ò : {1} ",max,min);
+----------------------------------------------------------------------------
+[°¡À§¹ÙÀ§º¸]
+ while(true)
+            {
+                Random s = new Random();
+                int r = s.Next(0, 2);
+                Console.Write("°¡À§(0) ¹ÙÀ§(1) º¸(2) ! [³ª°¡±â´Â -999]");
+                int a = Convert.ToInt16(Console.ReadLine());
+                if (a == -999)
+                    break;
+                if (a < 0 || a > 2)
+                {
+                    Console.WriteLine("´Ù½Ã ÀÔ·ÂÇÏ¼¼¿ä!!");
+                    continue;
+                }
+                if (r==a)
+                {
+                    Console.WriteLine("ÄÄÇ»ÅÍ ´Â {0}", r);
+                    Console.WriteLine("ºñ°å¾î! ´Ù½ÃÇÏÀö");
+                    continue;
+                }
+                if ((r == 0 && a == 1) || (r == 1 && a == 2) || (r == 2 && a == 0))
+                {
+                    Console.WriteLine("ÄÄÇ»ÅÍ ´Â {0}", r);
+                    Console.WriteLine("ÀÌ°å¾î! ");
+                }
+                else if ((r == 0 && a == 2) || (r == 1 && a == 0) || (r == 2 && a == 1))
+                {
+                    Console.WriteLine("ÄÄÇ»ÅÍ ´Â {0}", r);
+                    Console.WriteLine("Á³¾î ¤Ð¤Ð");
+                }
+
+            
+                
+            }
+----------------------------------------------------------------------------
+[ÁÖ¹Î¹øÈ£]
+string jm = ""; string gb1 = ""; string ty = "";
+            int y = 0; int m = 0; int d = 0; int g = 0; int a = 0;
+            int cy = 0;
+
+            Console.Write("ÁÖ¹Î¹øÈ£ 13ÀÚ¸®¸¦ ÀÔ·Â : ");
+            jm = Console.ReadLine();
+
+            y = Convert.ToInt16(jm.Substring(0, 2));
+            m = Convert.ToInt16(jm.Substring(2, 2));
+            d = Convert.ToInt16(jm.Substring(4, 2));
+            g = Convert.ToInt16(jm.Substring(6, 1));
+
+            ty = Convert.ToString(DateTime.Now);
+            cy = Convert.ToInt32(ty.Substring(0,4));
+            y = Calc_Year(y,g);
+            a = Calc_Age(y, g, a, cy);
+            g = Calc_Gubun(g, gb1);
+
+            Console.WriteLine("³âµµ  : {0}", y);
+            Console.WriteLine("¿ù    : {0}", m);
+            Console.WriteLine("³¯Â¥  : {0}", d);
+            Console.WriteLine("³ªÀÌ  : {0}", a);
+            Console.WriteLine("¼ºº°  : {0}", gb1);
+        }
+----------------------------------------------------------------------------
+[¼®Â÷]
+int[] Num = new int[5] { 0, 0, 0, 0, 0 };
+            int[] Rank = new int[5] { 0, 0, 0, 0, 0 };
+            int i = 0; int j = 0;
+
+            for(i=0;i<5;i++)
+            {
+                Console.Write("Á¡¼ö ÀÔ·Â : ");
+                Num[i] = Convert.ToInt16(Console.ReadLine());
+            }
+        
+            for (i = 0; i < 5; i++)
+            {
+                for (j = i; j < 5; j++)
+                {
+                    if (Num[i] > Num[j])
+                        Rank[j] = Rank[j]   + 1;
+                    else
+                        Rank[i] = Rank[i] + 1;
+
+                }
+            }
+            for (i = 0; i < 5; i++)
+            {
+                Console.WriteLine("{0}´Â {1}µî", Num[i], Rank[i]);
+            }
+----------------------------------------------------------------------------
+[µ¥ÀÌÅÍÁ¤·Ä]
+int []Jum = new int[5] {0,0,0,0,0};
+            int i,j;
+            int t=0;
+            for (i = 0; i < 5; i++)
+            {
+                Console.Write("Á¡¼ö ÀÔ·Â : ");
+                Jum[i] = Convert.ToInt16(Console.ReadLine());
+            }
+
+            for (j = 0; j <=5; j++)
+            {
+                for (i = j + 1; i <5; i++)
+                {
+                    if (Jum[j] < Jum[i])
+                    {
+                        t = Jum[j];
+                        Jum[j] = Jum[i];
+                        Jum[i] = t;
+                    }
+                }
+            }
+
+            Console.WriteLine("Á¤·Ä ÈÄ µ¥ÀÌÅÍ");
+            for(i=0;i<5;i++)
+            {
+                Console.Write("{0} ", Jum[i]);
+            }
+----------------------------------------------------------------------------
+[·Î¶Ç »ý¼º±â]
+            Random randNum = new Random();
+            int resultNum = 0;         // ·£´ý »ý¼ºµÈ ¼ýÀÚ ÀÓ½Ã ÀúÀå
+
+            Console.WriteLine("·Î¶Ç ¹øÈ£ »ý¼º±â ");
+            for (int i = 0; i < 45; i++)
+            {
+                resultNum = randNum.Next(1,45); 
+                Console.Write(resultNum + "\t");
+                if ((i+1) % 5 == 0)
+                    Console.WriteLine("");
+            }
+----------------------------------------------------------------------------
+[¹æÃ£±â]
+int data = 0;
+int[] su = new int[10] { 1, 3, 5, 7, 9, 2, 4, 9, 8, 7 };
+
+Console.Write("1ºÎÅÍ 10 »çÀÌ Ã£°íÀÚ ÇÏ´Â ¼ö ÀÔ·Â : ");
+            data = Convert.ToInt16(Console.ReadLine());
+            
+            for (int i = 0; i< 10; i++)
+            {
+                if(data == su[i])
+                {
+                    Console.WriteLine("Ã£°íÀÚÇÏ´Â ¼ö {0}Àº {1}¹øÂ° ¹æ¿¡ ÀÖ½À´Ï´Ù.",data,i);
+                }
+            }
+----------------------------------------------------------------------------
+[»ý¼ºÀÚ ¸Å°³º¯¼ö ÃÊ±âÈ­]
+class mbc //Å¬·¡½ºÀÌ¸§ kbs
+{
+    private string name;//Å¬·¡½º ¸â¹ö Àº´Ð
+    private int age;
+    public mbc(string irum)
+    {
+        this.name = irum;
+    }
+    public void Print()
+    {
+        Console.WriteLine("ÀÌ¸§Àº : {0}", name);
+    }
+    public mbc(int age)
+    {
+        this.age = age;.//this´Â ÇöÀç Å¬·¡½ºÀÇ ÇÊµå
+        }
+    public void Out()
+    {
+        Console.WriteLine("³ªÀÌ´Â : {0}", age);
+    }
+    public mbc(string irum, int age)
+    {
+        this.age = age;
+        this.name = irum;
+    }
+    public void Output()
+    {
+        Console.WriteLine("ÀÌ¸§Àº : {0} ³ªÀÌ´Â : {1} ", name, age); ;
+    }
+
+}
+class »ý¼ºÀÚ_¸Å°³º¯¼ö·Î_ÃÊ±âÈ­_¹æ¹ý_
+{
+    static void Main(string[] args)
+    {
+        mbc k1 = new mbc("È«±æµ¿");
+        k1.Print();
+        mbc k2 = new mbc(19);
+        k2.Out();
+        mbc k3 = new mbc("¹Ú°ü¿ì", 23);
+        k3.Output();
+    }
+}
+----------------------------------------------------------------------------
+[person]
+class man
+{
+    public static string name;
+    public int age;
+    public float weight;
+}
+class Person
+{
+
+
+    public static void Main(string[] args)
+    {
+        man m1 = new man();
+        man.name = "¹Ú°ü¿ì";
+        m1.age = 23;
+        m1.weight = 64.2F;
+        Console.WriteLine("{0},{1},{2}", man.name, m1.age, m1.weight);
+    }
+}
+----------------------------------------------------------------------------
+[µ¿Àû»ý¼º]
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+namespace µ¿Àû»ý¼º
+{
+    public partial class µ¿Àû»ý¼º : Form
+    {
+        GroupBox[] GB = new GroupBox[3]; // ±×·ì ¹Ú½º 
+        RadioButton[,] Bogi = new RadioButton[3, 5];  // º¸±â ¾ÕÀÌ ¹®Á¦¼ö
+        Label[] Quiz = new Label[3];            //¹®Á¦
+        Label lbScore = new Label();     // Á¡¼ö Ç¥½Ã Label  
+        Button button = new Button();  // Button 
+        int Score = 0;                          // Á¡¼ö º¯¼ö
+        string[,] Question = new string[3, 6] {
+            {"´ÙÀ½Áß 1+1 = ?" ,"ÀÏ", "ÀÌ", "»ï","»ç", "ÀÌ"},
+            {"ÀÎÃµ¿¡ ÀÖ´Â »êÀº ?", "ÇÑ¶ó»ê", "¹éµÎ»ê", "°è¾ç»ê", "±Ý°­»ê", "°è¾ç»ê"},
+            {"´ÙÀ½ Áß ¼ºÁúÀÌ ´Ù¸¥ ÇÏ³ª´Â ?","A","B","C","O","C"}
+            
+            };
+        public µ¿Àû»ý¼º()
+        {
+            InitializeComponent();
+            string aa = "[¹®Á¦ ";   // 1]  Àº ¼Ò½º¿¡¼­ Ãß°¡ ÇØ¾ß ÇÔ
+            
+            
+            #region
+            lbScore = new Label();
+            this.lbScore.Name = "lblScore";
+            this.lbScore.Text = "Score : ";
+            this.lbScore.Size = new Size(90, 30);
+            this.lbScore.AutoSize = true;
+            this.lbScore.Location = new System.Drawing.Point(30, 500);
+            this.Controls.Add(lbScore);
+            #endregion
+
+            #region      
+            this.button.Name = "btnSubmit";
+            this.button.Text = "Ã¤Á¡ÇÏ±â";
+            this.button.Size = new Size(90, 30);
+            this.button.AutoSize = true;
+            this.button.Location = new System.Drawing.Point(180, 500);
+            this.button.Click += new EventHandler(button_Click);
+            this.Controls.Add(button);
+            #endregion
+
+            #region
+            for (int n = 0; n < GB.Length; n++)
+            {
+                Random a = new Random();
+                int num = a.Next(0, 5);
+                GB[n] = new GroupBox();
+                this.GB[n].AutoSize = true;
+                this.GB[n].Location = new System.Drawing.Point(10, 10 + (n * 150));
+                this.GB[n].Size = new System.Drawing.Size(350, 120);
+                this.GB[n].TabIndex = 0;
+                this.GB[n].TabStop = false;
+                this.GB[n].Text = aa + (n + 1) + "] " + Question[n, 0];
+                this.Controls.Add(GB[n]);
+
+                for (int i = 0; i < 5; i++)
+                {
+                    Bogi[n, i] = new RadioButton();
+                    this.Bogi[n, i].Location = new System.Drawing.Point(30, 30 + (i * 20));
+                    this.Bogi[n, i].Size = new System.Drawing.Size(100, 20);
+                    this.Bogi[n, i].Text = Question[n, i + 1];
+                    if (i == 4)
+                        Bogi[n, 4].Visible = false;
+                    this.Controls.Add(this.Bogi[n, i]);
+                    this.GB[n].Controls.Add(this.Bogi[n, i]);
+                }
+
+            }
+#endregion
+        }
+
+        private void button_Click(object sender, EventArgs e)
+        {
+            for(int i = 0; i < 3;i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    if(Bogi[i,j].Checked == true)
+                    {
+                        if(Bogi[i, j].Text == Question[i, 5])
+                        {
+                            Score += 1;
+                        }
+                    }
+                }
+            }
+
+            lbScore.Text = "Score : " + Convert.ToString(Score);
+            Score = 0;
+        }
+    }
+}
+----------------------------------------------------------------------------
+[À©Æû °¡À§¹ÙÀ§º¸]
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp4
+{
+    public partial class °¡À§¹ÙÀ§º¸ : Form
+    {
+        public int gw = 0;
+        public int bw = 0;
+        public int bo = 0;
+        public int cgw = 0;
+        public int cbw = 0;
+        public int cbo = 0;
+        public int w = 0;
+        public int l = 0;
+        public int t = 0;
+
+        public °¡À§¹ÙÀ§º¸()
+        {
+            InitializeComponent();
+            Random a = new Random();
+            int n = a.Next(0, 2);
+            if (n == 0)
+                cgw = cgw + 1;
+            else if (n == 1)
+                cbw = cbw + 1;
+            else
+                cbo = cbo + 1;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            pictureBox4.Image = Properties.Resources.gawei;
+            label4.Text = "°¡À§";           
+            Random a = new Random();
+            int n = a.Next(0, 3);
+            gw = gw + 1;
+            label11.Text = gw.ToString();
+            if (n==0)
+            {
+                pictureBox5.Image = Properties.Resources.gawei;
+                label5.Text = "°¡À§";
+                t = t + 1;
+                cgw = cgw + 1;
+                label3.Text = "ºñ°å¾î !";
+                label21.Text = t.ToString(); ;
+                label17.Text = cgw.ToString() ;
+            }
+            else if(n==1)
+            {
+                pictureBox5.Image = Properties.Resources.bawei;
+                label5.Text = "¹ÙÀ§";
+                l = l + 1;
+                cbw = cbw + 1;
+                label3.Text = "Á³¾î !";
+                label22.Text = l.ToString(); 
+                label16.Text = cbw.ToString();
+            }
+            else
+            {
+                pictureBox5.Image = Properties.Resources.bo;
+                label5.Text = "º¸";
+                w = w + 1;
+                cbo = cbo + 1;
+                label3.Text = "ÀÌ°å¾î !";
+                label23.Text = w.ToString(); 
+                label15.Text = cbo.ToString();
+            }
+                
+            
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            pictureBox4.Image = Properties.Resources.bawei;
+            label4.Text = "¹ÙÀ§";            
+            Random a = new Random();
+            int n = a.Next(0, 3);
+            bw = bw + 1;
+            label10.Text = bw.ToString();
+            if (n == 0)
+            {
+                pictureBox5.Image= Properties.Resources.gawei;
+                label5.Text = "°¡À§";
+                w = w + 1;
+                cgw = cgw + 1;
+                label3.Text = "ÀÌ°å¾î !";
+                label17.Text = cgw.ToString();
+                label23.Text = w.ToString();
+            }
+            else if (n == 1)
+            {
+                pictureBox5.Image = Properties.Resources.bawei;
+                label5.Text = "¹ÙÀ§";
+                t = t + 1;
+                cbw = cbw + 1;
+                label3.Text = "ºñ°å¾î !";
+                label16.Text = cbw.ToString();
+                label21.Text = t.ToString(); 
+            }
+            else
+            {
+                pictureBox5.Image = Properties.Resources.bo;
+                label5.Text = "º¸";
+                l = l + 1;
+                cbo = cbo + 1;
+                label3.Text = "Á³¾î !";
+                label15.Text = cbo.ToString();
+                label22.Text = l.ToString();
+            }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            pictureBox4.Image = Properties.Resources.bo;
+            label4.Text = "º¸";           
+            Random a = new Random();
+            int n = a.Next(0, 2);
+            bo = bo + 1;
+            label9.Text = bo.ToString();
+            if (n == 0)
+            {
+                pictureBox5.Image = Properties.Resources.gawei;
+                label5.Text = "°¡À§";
+                l = l + 1;
+                cgw = cgw + 1;
+                label3.Text = "Á³¾î !";
+                label17.Text = cgw.ToString();
+                label22.Text = l.ToString();
+            }
+            else if (n == 1)
+            {
+                pictureBox5.Image = Properties.Resources.bawei;
+                label5.Text = "¹ÙÀ§";
+                w = w + 1;
+                cbw = cbw + 1;
+                label3.Text = "ÀÌ°å¾î !";
+                label23.Text = w.ToString();
+                label16.Text = cbw.ToString();
+            }
+            else
+            {
+                pictureBox5.Image = Properties.Resources.bo;
+                label5.Text = "º¸";
+                t = t + 1;
+                cbo = cbo + 1;
+                label3.Text = "ºñ°å¾î !";
+                label21.Text = t.ToString();
+                label15.Text = cbo.ToString();
+            }
+        }
+
+        
+    }
+}
+----------------------------------------------------------------------------
+[À©Æû ÁÖ¹Î]
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp1
+{
+    public partial class ÁÖ¹Î¹øÈ£ : Form
+    {
+        string year = "";
+        string mon = "";
+        string day = "";
+        int s;
+
+        public ÁÖ¹Î¹øÈ£()
+        {
+            InitializeComponent();
+
+        }
+
+        private void textBox2_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox2.Text = "";
+        }
+        private void textBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox1.Text = "";
+        }
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            String str = textBox2.Text;
+            if (str.Length == 5)
+            {
+                textBox1.Focus();
+            }
+            if (!(char.IsDigit(e.KeyChar) || e.KeyChar == Convert.ToChar(Keys.Back)))
+            {
+                e.Handled = true;
+
+            }
+
+        }
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsDigit(e.KeyChar) || e.KeyChar == Convert.ToChar(Keys.Back)))
+            {
+                e.Handled = true;
+            }
+            String str = textBox1.Text;
+            if (str.Length == 6)
+            {
+                button1.Focus();
+            }
+
+        }
+        private void button1_MouseClick(object sender, MouseEventArgs e)
+        {
+
+            string str = textBox2.Text;
+            string s1 = textBox1.Text;
+            year = str.Substring(0, 2);
+            mon = str.Substring(2, 2);
+            day = str.Substring(4, 2);
+            s = int.Parse(s1.Substring(0, 1));
+            int ec = 6 - str.Length;
+            int ec1 = 7 - s1.Length;
+            if (ec != 0 || ec1 != 0) // ¾ÕÀÚ¸® ¼ö ¿À·ùÀÏ¶© ¿À·ù ¤Ð¤Ð
+            {
+                MessageBox.Show("Á¤È®ÇÑ ÀÚ¸´¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä !");
+                Year.Text = "";
+                Mon.Text = "";
+                Day.Text = "";
+                Se.Text = "";
+                Age.Text = "";
+            }
+            //tabÅ° ´­·¯¼­ ´ÙÀ½ ??
+            else if (s < 1 || s > 4)
+            {
+                MessageBox.Show("¼ºº° ¿À·ùÀÔ´Ï´Ù !");
+                Year.Text = "";
+                Mon.Text = "";
+                Day.Text = "";
+                Se.Text = "";
+                Age.Text = "";
+            }
+            else
+            {
+                Year.Text = year;
+                Mon.Text = mon;
+                Day.Text = day;
+                if (s == 1 || s == 3)
+                {
+                    Se.Text = "³²¼º";
+                }
+                else if (s == 2 || s == 4)
+                {
+                    Se.Text = "¿©¼º";
+                }
+                int age = 1900 + int.Parse(str.Substring(0, 2));
+                DateTime now; // ³¯Â¥ º¯¼ö now¼±¾ð
+                now = DateTime.Now; // ÇöÀç½Ã°£
+                Age.Text = (now.Year - age + 1).ToString();
+            }
+
+
+
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Year.Text = "";
+            Mon.Text = "";
+            Day.Text = "";
+            Se.Text = "";
+            Age.Text = "";
+            textBox2.Text = "¾Õ 6ÀÚ¸® ÀÔ·Â";
+            textBox1.Text = "µÚ 7ÀÚ¸® ÀÔ·Â";
+        }
+      
+
+    }
+}
+----------------------------------------------------------------------------
+[À©Æû °ø¸Ô±â°ÔÀÓ]
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp3
+{
+    public partial class FrmKeyDown : Form
+    {
+        private Point p;
+        private Point o;
+        private Point o1;
+        private Point o2;
+        private int src = 0;
+        public FrmKeyDown()
+        {
+            InitializeComponent();
+            p.X = 0; p.Y = 300;
+            o.X = 0;
+            o.Y = o1.Y = o2.Y = 40;
+            o1.X = 100;
+            o2.X = 200;
+
+        }
+
+        private void FrmKeyDown_Paint(object sender, PaintEventArgs e)
+        {
+
+            Random a = new Random();
+            int s = a.Next(20, 280);
+            e.Graphics.FillEllipse(Brushes.Blue, p.X, p.Y, 40, 40);
+            e.Graphics.FillEllipse(Brushes.Red, o.X, o.Y, 40, 40);
+            e.Graphics.FillEllipse(Brushes.Yellow, o1.X, o1.Y, 40, 40);
+            e.Graphics.FillEllipse(Brushes.Purple, o2.X, o2.Y, 40, 40);
+            if (p.X > 300)
+            {
+                p.X = 0;
+                e.Graphics.FillEllipse(Brushes.Blue, p.X, p.Y, 40, 40);
+            }
+            else if (p.X < 0)
+            {
+                p.X = 300;
+                e.Graphics.FillEllipse(Brushes.Blue, p.X, p.Y, 40, 40);
+            }
+            if (o.Y > 340)
+            {
+                o.Y = 40;
+                o.X = s;
+                e.Graphics.FillEllipse(Brushes.Blue, p.X, p.Y, 40, 40);
+            }
+            if (o1.Y > 340)
+            {
+                o1.Y = 40;
+                o1.X = s;
+                e.Graphics.FillEllipse(Brushes.Yellow, o1.X, o1.Y, 40, 40);
+            }
+            if (o2.Y > 340)
+            {
+                o2.Y = 40;
+                o2.X = s;
+                e.Graphics.FillEllipse(Brushes.RoyalBlue, o2.X, o2.Y, 40, 40);
+            }
+            if (p.X > o.X - 40 && p.X < o.X + 40 && p.Y > o.Y - 40 && p.Y < o.Y + 40)
+            {
+                src = src + 10;
+                Score.Text = src.ToString();
+                o.X = s; o.Y = 0;
+                e.Graphics.FillEllipse(Brushes.Red, o.X, o.Y, 40, 40);
+
+            }
+            if (p.X > o1.X - 40 && p.X < o1.X + 40 && p.Y > o1.Y - 40 && p.Y < o1.Y + 40)
+            {
+                src = src + 10;
+                Score.Text = src.ToString();
+                o1.X = s; o1.Y = 0;
+                e.Graphics.FillEllipse(Brushes.Yellow, o1.X, o1.Y, 40, 40);
+
+            }
+            if (p.X > o2.X - 40 && p.X < o2.X + 40 && p.Y > o2.Y - 40 && p.Y < o2.Y + 40)
+            {
+                src = src + 10;
+                Score.Text = src.ToString();
+                o2.X = s; o2.Y = 0;
+                e.Graphics.FillEllipse(Brushes.Purple, o2.X, o2.Y, 40, 40);
+
+            }
+            if(o.Y>335 || o1.Y>335 || o2.Y>335)
+            {
+	  if (o.Y > 335)
+                    o.Y = 0;
+                else if (o1.Y > 335)
+                    o1.Y = 0;
+                else
+                    o2.Y = 0;
+                src = src - 5;
+                Score.Text = src.ToString();
+            }
+            if (src < -10)
+            {
+                MessageBox.Show("°ÔÀÓ¿À¹ö ¤Ð¤Ð");
+                Application.Exit();
+            }
+
+        }
+
+        private void FrmKeyDown_KeyDown(object sender, KeyEventArgs e)
+        {
+
+
+            switch (e.KeyCode)
+            {
+                case Keys.Left: { p.X -= 10; Invalidate(); break; }
+                case Keys.Right:{ p.X += 10; Invalidate(); break; }
+                case Keys.Escape: { MessageBox.Show("°ÔÀÓÁ¾·á!");
+                        Application.Exit(); break; }
+                default:
+                    break;
+            }
+            
+
+
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+            o.Y = o.Y + 1; o1.Y = o1.Y + 1; o2.Y = o2.Y + 1;
+            Random a = new Random();
+            int s = a.Next(0, 2);
+            if (s == 1)
+            {
+                o.X = o.X + 1;
+                o1.X = o1.X - 1;
+            }
+            else if (s == 2)
+            {
+                o1.X = o1.X - 1;
+                o2.X = o2.X + 1;
+            }
+            else
+                o2.X = o2.X - 1;
+            Invalidate();
+        }
+
+    }
+
+        
+    }
+---------------------------------------------------------------------------
+[¿ø±×¸®±â]
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp2
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            // e.Button : ´­·¯Áø ¸¶¿ì½º ¹öÆ° °ª
+            // MouseButton :  ¸¶¿ì½º Áß¿¡¼­ ¾î¶² ¸¶¿ì½º ¹öÆ° ´­·¶´ÂÁö
+            if (e.Button == MouseButtons.Right)
+            {
+                // ±×·¡ÇÈ °´Ã¼ »ý¼º
+                Graphics g = CreateGraphics();
+                //¿ø ±×¸®±â
+                g.DrawEllipse(Pens.Red, 0, 0, 20, 20);
+                g.DrawEllipse(Pens.Red, e.X, e.Y, 15, 15);
+                g.Dispose();   //ÇÒ´çµÈ ¸Þ¸ð¸®°¡ ´õ ÀÌ»ó »ç¿ëµÇÁö
+            }  // ¾ÊÀ» ¶§ °¡ºñÁö ¼öÁý±â¸¦ ÅëÇØ Á¤¸®(ÇØÁ¦) ÇÔ
+            p.X = e.X; p.Y = e.Y; // Å¬¸¯ÇÑ °÷ÀÇ ÁÂÇ¥¸¦ ±â¾ï
+        }
+        private Point p; //  Point °´Ã¼ p »ý¼º
+
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)  // À©ÂÊ ¸¶¿ì½º ¹öÆ° ´­·¶À» ¶§ Ã³¸® 
+            {
+                Graphics g = this.CreateGraphics();
+                // Å¬¸¯ÇÑ °÷ÀÇ ÁÂÇ¥¿¡¼­ µå·¡±× ÇÑ °÷ ±îÁö Á÷¼± ±×¸²
+                g.DrawLine(Pens.Blue, p.X, p.Y, e.X, e.Y);
+                g.Dispose(); // ¸ðµç ¸®¼Ò½º ÇØÁ¦
+            }
+        }
+    }
+    }
+
+
+----------------------------------------------------------------------------
+[Á¡¼öÃß°¡] if (a1.Checked == true)
+[¾ÛÁ¾·á] Application.Exit();
+[ÀÌ¹ÌÁöÃß°¡] pictureBox.Image = Properties.Resources.ÆÄÀÏ¸í; (ÇÁ·ÎÁ§Æ® ¸®¼Ò½ºÆÄÀÏ)
+[¼ýÀÚ¸¸ ÀÔ·Â] if (!(char.IsDigit(e.KeyChar) || e.KeyChar == Convert.ToChar(Keys.Back)))
+            		{ e.Handled = true; }
+[¹®ÀÚ¿­ Á¤¼öº¯È¯] int.Parse(½ºÆ®¸µÇü)
+----------------------------------------------------------------------------
+[ÁöÈÆÀÌ °è»ê±â]
+private void Calculate(Stack<string> numbers,Stack<string> opers)   //½ºÅÃÀ» °¡Á®¿Í¼­
+        {
+            int oper_count = opers.Count();
+
+            for (int i = 0; i < oper_count; i++)
+            {
+                if (opers.Peek() == "*" || opers.Count() == 1 || opers.Peek() == "/")
+                {
+                    num1 = Convert.ToDouble(numbers.Pop());
+                    if(numbers.Count() != 0)
+                    num2 = Convert.ToDouble(numbers.Pop());
+
+                    switch (opers.Pop())
+                    {   //±âÈ£°¡³ª¿À¸é
+                        case "+": buff_result = num2 + num1; break;
+                        case "-": buff_result = num2 - num1; break;
+                        case "*": buff_result = num2 * num1; break;
+                        case "/": buff_result = num2 / num1; break;
+                        case "%": buff_result = num2 % num1; break;
+                        case "^": buff_result = Pow(num2, num1); break;
+                        case "!": buff_result = Factorial((int)num1); break;
+                        case "¡î": buff_result = Sqrt(num1); break;
+                    }
+                    numbers.Push(buff_result.ToString());
+                }
+                else
+                {
+                    num = Convert.ToDouble(numbers.Pop());
+                    num1 = Convert.ToDouble(numbers.Pop());
+                    num2 = Convert.ToDouble(numbers.Pop());
+                    oper = opers.Pop();
+                    switch (opers.Pop())
+                    {   //±âÈ£°¡³ª¿À¸é
+                        case "+": buff_result = num2 + num1; break;
+                        case "-": buff_result = num2 - num1; break;
+                        case "*": buff_result = num2 * num1; break;
+                        case "/": buff_result = num2 / num1; break;
+                        case "%": buff_result = num2 % num1; break;
+                        case "^": buff_result = Pow(num2, num1); break;
+                        case "!": buff_result = Factorial((int)result); break;
+                        case "¡î": buff_result = Sqrt(result); break;
+                    }
+                    numbers.Push(buff_result.ToString());
+                    opers.Push(oper);
+                    numbers.Push(num.ToString());
+                }
+            }
+            result = Convert.ToDouble(numbers.Pop());
+            numbers.Clear();
+            opers.Clear();
+            numbers.Push(result.ToString());
+        }
+--------------------------------------------------------------------------------
+[³» °è»ê±â]
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+namespace °è»ê±â¿¬½À
+{
+    public partial class Form1 : Form
+    {       
+        double p=1;      
+        double result = 0;
+        string output = "";
+        string buff = "";
+        int cn = 0;
+        Stack<string> strStack = new Stack<string>();
+        Queue<string> buf = new Queue<string>();
+
+
+
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = textBox1.Text + "1";
+            strStack.Push("1");
+            cn += 1;
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = textBox1.Text + "2";
+            strStack.Push("2");
+            cn += 1;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = textBox1.Text + "3";
+            strStack.Push("3");
+            cn += 1;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = textBox1.Text + "4";
+            strStack.Push("4");
+            cn += 1;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = textBox1.Text + "5";
+            strStack.Push("5");
+            cn += 1;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = textBox1.Text + "6";
+            strStack.Push("6");
+            cn += 1;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = textBox1.Text + "7";
+            strStack.Push("7");
+            cn += 1;
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = textBox1.Text + "8";
+            strStack.Push("8");
+            cn += 1;
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = textBox1.Text + "9";
+            strStack.Push("9");
+            cn += 1;
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = textBox1.Text + "0";
+            strStack.Push("0");
+            cn += 1;
+        }
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            textBox1.Text = textBox1.Text + "+";
+            strStack.Push("+");
+            cn += 1;
+        }
+       private void button8_Click_1(object sender, EventArgs e)
+        {
+            textBox1.Text = textBox1.Text + "-";
+            strStack.Push("-");
+            cn += 1;
+        }
+
+        private void button12_Click_1(object sender, EventArgs e)
+        {
+            textBox1.Text = textBox1.Text + "x";
+            strStack.Push("*");
+            cn += 1;
+        }
+
+        private void button16_Click_1(object sender, EventArgs e)
+        {
+            textBox1.Text = textBox1.Text + "¡À";
+            strStack.Push("/");
+            cn += 1;
+        }
+       
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = textBox1.Text + "^";
+            p = int.Parse(strStack.Pop());
+            textBox1.Text = textBox1.Text + "=" + (p*p).ToString();
+            strStack.Push(Convert.ToString(p * p));
+            cn = 1;
+
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = textBox1.Text + "!";
+            int s = int.Parse(strStack.Pop());
+            
+            for (int i = 1; i<= s; i++)
+            {
+                p = p * i;
+            }
+            textBox1.Text = textBox1.Text + " = "+ p.ToString();
+            strStack.Push(Convert.ToString(p));
+            cn = 1;
+        }
+        private void button20_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = textBox1.Text + "¡î";
+            p = Math.Sqrt(Convert.ToDouble(strStack.Pop()));
+            textBox1.Text = textBox1.Text + " = " + p.ToString();
+            strStack.Push(Convert.ToString(p));
+
+        }   
+
+
+        private void bt_clear(object sender, EventArgs e)
+        {           
+            p = 1;
+            textBox1.Text = "";
+            result = 0;
+            string buff = "";
+            cn = 0;           
+            Stack<string> strStack = new Stack<string>();
+            Queue<string> buf = new Queue<string>();
+        }
+
+        private void car_bt(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            result = Convert.ToDouble(strStack.Pop());
+            if (cn == 3)
+            {
+
+                switch (strStack.Pop())
+                {
+                    case "+": result += Convert.ToDouble(strStack.Pop()); break;
+                    case "-": result = Convert.ToDouble(strStack.Pop()) - result; break;
+                    case "*": result *= Convert.ToDouble(strStack.Pop()); break;
+                    case "/":
+                        if (result == 0)
+                        {
+                            textBox1.Text = "0À¸·Î ³ª´­ ¼ö ¾øÀ½";
+                            return;
+                        }
+                        result = Convert.ToDouble(strStack.Pop()) / result; break;
+                        
+                }
+                strStack.Push(Convert.ToString(result));
+
+            }
+            else
+            {
+                for (int i = 0; i < cn - 1; i = i + 2)
+                {
+                    if (strStack.Peek() == "*" || strStack.Peek() == "/")
+                    {
+                        switch (strStack.Pop())
+                        {
+                            case "*": result *= Convert.ToDouble(strStack.Pop()); break;
+                            case "/":
+                                if (result == 0)
+                                {
+                                    textBox1.Text = "0À¸·Î ³ª´­ ¼ö ¾øÀ½";
+                                    return;
+                                }
+                                result = Convert.ToDouble(strStack.Pop()) / result; break;
+                                
+                        }
+                    }
+                    else
+                    {
+                        buf.Enqueue(strStack.Pop());
+                        buf.Enqueue(strStack.Pop());
+
+                    }
+
+
+
+                }
+                int t = buf.Count;
+                for (int i = 0; i < t; i = i + 2)
+                {
+                    switch (buf.Dequeue())
+                    {
+                        case "+": result += Convert.ToDouble(buf.Dequeue()); break;
+                        case "-": result = Convert.ToDouble(buf.Dequeue()); break;
+                    }
+                }
+            }
+
+            strStack.Push(Convert.ToString(result));
+                textBox1.Text += "=" + result.ToString();
+            cn = 1;
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = textBox1.Text + "%";
+            strStack.Push("%");
+            cn += 1;
+        }
+    }
+}
+    
+-------------------------------------------------------------------------------
+[¸Þ¸ðÀå]
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+using System.IO;
+
+namespace WindowsFormsApp5
+{
+    public partial class ¸Þ¸ðÀå : Form
+    {
+        public ¸Þ¸ðÀå()
+        {
+            InitializeComponent();
+        }
+        private bool _IsTextChanged;
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //this.openFileDialog1.ShowDialog();
+        }
+
+        private void mi_New_Click(object sender, EventArgs e)
+        {
+            Save_Clear_Cancel("New");
+        }
+
+        private void Save_Clear_Cancel()
+        {
+            if (_IsTextChanged) // ÅØ½ºÆ® ¹Ú½º ³»¿ëÀÌ º¯°æµÇ¾úÀ¸¸é ¸Þ¼¼Áö¹Ú½º È£Ãâ
+            {
+                DialogResult objDr = MessageBox.Show(
+                     "ÆÄÀÏ³»¿ëÀÌ º¯°æµÇ¾ú½À´Ï´Ù.\r\n" +
+                     "º¯°æµÈ ³»¿ëÀ» ÀúÀåÇÏ½Ã°Ú½À´Ï±î ?", "¸Þ¸ðÀå",
+                     MessageBoxButtons.YesNoCancel,  // ¹öÆ° 3°³ Ç¥½Ã
+                     MessageBoxIcon.Exclamation);       // ¾ÆÀÌÄÜ Ç¥½Ã
+                switch (objDr)
+                {
+                    case DialogResult.Yes:  // YesÅ¬¸¯ÇÏ¸é - ÀúÀå ÇÒ °Å¸é
+                        SaveText();  // ÀúÀå±â´É ÇÔ¼ö Ã³¸® - È£Ãâ
+                        _IsTextChanged = false; // ÀúÀåÇÏ°í ³ª¸é ´Ù½Ã false·Î ¼³Á¤
+                        break;
+                    case DialogResult.No:      // ¾Æ´Ï¿ä ¹öÆ° - ÀúÀå ¾ÈÇÒ°Å¸é
+                        this.txtMemo.ResetText(); // ÇöÀç ½áÁø ±Û ¹ö¸®°í »õ±Û ÀÛ¼º
+                        this.Text = "Á¦¸ñ¾øÀ½"; // Á¦¸ñ ´Ù½Ã ¼³Á¤
+                        _IsTextChanged = false;  // ´Ù½Ã ¼³Á¤
+                        break;
+                    case DialogResult.Cancel:  // Ãë¼Ò¹öÆ°ÀÌ¸é ±×´ë·Î µÐ´Ù 
+                        break;
+                }
+            }
+            else   // »õ·Î¸¸µé±â - ÅØ½ºÆ® ¹Ú½º ³»¿ëÀÌ º¯°æµÇÁö ¾Ê¾ÒÀ¸¸é
+            {
+                ClearText();
+            }
+        }
+
+        private void ClearText()
+        {
+            this.txtMemo.ResetText(); // ÅØ½ºÆ® ¹Ú½º ¸®¼Â È£Ãâ
+            this.Text = "Á¦¸ñ¾øÀ½"; // Á¦¸ñ ´Ù½Ã ¼³Á¤ ? ¾Æ¹« ÀÔ·Â ¾øÀ¸¹Ç·Î 
+            _IsTextChanged = false; // ´Ù½Ã ¼³Á¤
+        }
+
+        private void SaveText()
+        {
+            if (this.Text == "Á¦¸ñ¾øÀ½")  // ÇÑ¹øµµ ÀúÀåµÇÁö ¾ÊÀº ¹®¼­¶ó¸é
+            {
+                DialogResult objDr = saveFileDialog1.ShowDialog();
+                if (objDr != DialogResult.Cancel)// ¿¹ ¹öÆ° Å¬¸¯ÇÏ¸é -ÀúÀåÇÒ°Å¸é
+                {
+                    string strFileName = saveFileDialog1.FileName;  // ´ëÈ­»óÀÚ¿¡¼­ ÀÔ·ÂÇÑ ÆÄÀÏ¸í
+                    SaveFile(strFileName); // ÀúÀå±â´É ¸Þ¼ÒµåÈ£Ãâ-¸Å°³º¯¼ö´Â ÆÄÀÏ¸í
+                }
+            }
+            else  // ÇÑ¹øÀÌ¶óµµ ÀúÀåµÈ ¹®¼­¶ó¸é
+            {
+                string strFileName = this.Text; // ÆÄÀÏ ÀüÃ¼ ÀÌ¸§
+                SaveFile(strFileName); // ÀúÀå±â´É ¸Þ¼ÒµåÈ£Ãâ-¸Å°³º¯¼ö´Â ÆÄÀÏ¸í
+            }
+        }
+
+        private void SaveFile(string strFileName)
+        {
+            StreamWriter objSw = new StreamWriter(strFileName);
+            objSw.Write(this.txtMemo.Text);
+            objSw.Flush();  // ½ºÆ®¸²ÀÇ ³»¿ë ºñ¿ò
+            objSw.Close();
+
+            _IsTextChanged = false;  // ÀúÀåÇÏ°í ³ª¼­ ´Ù½Ã false·Î ¼³Á¤ 
+
+            this.Text = strFileName;
+        }
+
+        private void txtMemo_TextChanged(object sender, EventArgs e)
+        {
+            _IsTextChanged = true; // ÅØ½ºÆ® º¯°æµÇ¾úÀ» °æ¿ì Àû¿ë
+        }
+
+        private void mi_Open_Click(object sender, EventArgs e)
+        {
+            if (_IsTextChanged)
+            {
+                Save_Clear_Cancel("Open");
+            }
+            else
+            {
+                OpenText();
+            }
+        }
+        private void Save_Clear_Cancel(string strFlag) // ¸Å°³º¯¼ö 
+        {
+            DialogResult objDr = MessageBox.Show(
+                "ÆÄÀÏÀÇ ³»¿ëÀÌ º¯°æµÇ¾ú½À´Ï´Ù.\r\n" +
+                "º¯°æµÈ ³»¿ëÀ» ÀúÀåÇÏ½Ã°Ú½À´Ï±î?",
+                "¸Þ¸ðÀå",
+                MessageBoxButtons.YesNoCancel,
+                MessageBoxIcon.Exclamation);
+            switch (objDr)
+            {
+                case DialogResult.Yes:    // ÀúÀåÇÒ°Å¸é ? Yes ¹öÆ°ÀÌ¸é
+                    SaveText();   // ÅØ½ºÆ® ÀúÀå
+                    if (strFlag == "New")  // YesÀÌ°í ¸Å°³º¯¼ö°¡ New ÀÏ ¶§ 
+                        ClearText(); // ÅØ½ºÆ® Å¬¸®¾î(¸®¼Â)
+                    else
+                        OpenText(); // ¿­±â
+                    break;
+                case DialogResult.No:   // ÀúÀå ¾ÈÇÒ°Å¸é - NO ¹öÆ°ÀÌ¸é
+                    if (strFlag == "New") // NoÀÌ°í ¸Å°³º¯¼ö°¡ New ÀÏ  ¶§ 
+                        ClearText(); // ÅØ½ºÆ® Å¬¸®¾î(¸®¼Â)
+                    else
+                        OpenText(); // ¿­±â
+                    break;
+                case DialogResult.Cancel:   // Ãë¼Ò¸é ±×´ë·Î À¯Áö
+                    break;
+            }
+
+        }
+        private void OpenText()
+        {
+            DialogResult objDr = openFileDialog1.ShowDialog(); //¿­±â ´ëÈ­»óÀÚ
+
+            if (objDr != DialogResult.Cancel)  // ShowDialog() Ãë¼Ò¹öÆ°ÀÌ ¾Æ´Ï¶ó¸é
+            {
+                string strFileName = openFileDialog1.FileName;
+                // ¿­±â ´ëÈ­»óÀÚ¿¡¼­ ÀÔ·ÂÇÑ ÆÄÀÏ¸í À¸·Î °´Ã¼ »ý¼º
+                StreamReader objSr = new StreamReader(strFileName);
+                // ÇØ´ç ÆÄÀÏ¿¡¼­ Ã³À½ºÎÅÍ ³¡±îÁö Read
+                this.txtMemo.Text = objSr.ReadToEnd();   // ÀÐ¾î¼­ ÅØ½ºÆ® ¹Ú½º¿¡ ºÙÀÓ
+                objSr.Close();
+
+                _IsTextChanged = false;   // º¯°æ¿©ºÎ¸¦ ´Ù½Ã ÃÊ±âÈ­
+                this.Text = strFileName;  // Á¦¸ñ¿¡ ÆÄÀÏ¸í Ãâ·Â
+            }
+        }
+
+        private void mi_Save_Click(object sender, EventArgs e)
+        {
+            SaveText();
+        }
+
+        private void mi_SaveAs_Click(object sender, EventArgs e)
+        {
+            // ÅØ½ºÆ® ³»¿ëÀÌ º¯°æµÇ´ø ¾Æ´Ïµç ¹«Á¶°Ç ÀúÀåÇÏ±â Ã¢ ¶ç¿ö ÁÜ
+            DialogResult objDr = saveFileDialog1.ShowDialog();
+            if (objDr != DialogResult.Cancel)  // Ãë¼Ò ¹öÆ°ÀÌ ¾Æ´Ï¸é
+            {
+                string strFileName = saveFileDialog1.FileName;  // ´ëÈ­»óÀÚ¿¡¼­ ÀÔ·ÂÇÑ  ÀÌ¸§
+                SaveFile(strFileName); // ÆÄÀÏÀÌ¸§ ¸Å°³º¯¼ö·Î ÀúÀåÇÏ±â È£Ãâ
+            }
+        }
+
+        private void mi_PageSetup_Click(object sender, EventArgs e)
+        {
+            //[1] PrintDocument.DocumentName = ¹®¼­ ÁöÁ¤
+            printDocument1.DocumentName = txtMemo.Text;
+            //[2] PageSetupDialog.Document = PrintDocument
+            pageSetupDialog1.Document = this.printDocument1;
+            //[3] ÆäÀÌÁö ¼³Á¤ Ã¢ ¶ç¿ì±â
+            pageSetupDialog1.ShowDialog();
+        }
+
+        private void mi_Print_Click(object sender, EventArgs e)
+        {
+            printDocument1.DocumentName = txtMemo.Text;
+            if (printDialog1.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    printDocument1.Print();
+                }
+                catch
+                {
+                    MessageBox.Show("ÀÎ¼âÇÏ´Â µµÁß¿¡ ¿¡·¯°¡ ¹ß»ýÇß½À´Ï´Ù.",
+                        "ÀÎ¼â ¿À·ù", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            StringReader objSr = new StringReader(this.txtMemo.Text);
+
+            // ÇöÀç ¹®¼­ÀÇ ±Û²Ã°ú »çÀÌÁî
+            Font printFont = new Font(txtMemo.Font.Name, txtMemo.Font.Size);
+            float linesPerPage = 0; // ÆäÀÌÁöÀÇ ¶óÀÎ ¼ö
+            float yPos = 0; // ÆäÀÌÁö »ó´Ü¿¡¼­ ¶³¾îÁø À§Ä¡(¹®ÀÚ¿­ Ãâ·Â)
+            int count = 0; // ÆäÀÌÁö ÁÙ ¹øÈ£
+
+            float leftMargin = e.MarginBounds.Left; // ¿ÞÂÊ ¿©¹é
+            float topMargin = e.MarginBounds.Top; // ¿À¸¥ÂÊ ¿©¹é
+
+            string line = null; // °¢ ÇàÀÇ µ¥ÀÌÅÍ ÀúÀå
+            linesPerPage = // ÆäÀÌÁö ´ç ¶óÀÎ ¼ö °è»ê
+                e.MarginBounds.Height / printFont.GetHeight(e.Graphics);
+            while (count < linesPerPage && ((line = objSr.ReadLine()) != null))
+            {
+                yPos = topMargin + (count * printFont.GetHeight(e.Graphics));
+                e.Graphics.DrawString(line, printFont, Brushes.Black,
+                    leftMargin, yPos, new StringFormat());
+                count++;
+            }
+            if (line != null)
+            {
+                e.HasMorePages = true;
+            }
+            else
+            {
+                e.HasMorePages = false;
+            }
+            objSr.Close();
+        }
+
+        private void mi_Exit_Click(object sender, EventArgs e)
+        {
+            if (_IsTextChanged)
+            {
+                DialogResult objDr = MessageBox.Show(
+                    this.Text + " " +
+                    "ÆÄÀÏÀÇ ³»¿ëÀÌ º¯°æµÇ¾ú½À´Ï´Ù.\r\n" +
+                    "º¯°æµÈ ³»¿ëÀ» ÀúÀåÇÏ½Ã°Ú½À´Ï±î?", "¸Þ¸ðÀå",
+                    MessageBoxButtons.YesNoCancel,
+                    MessageBoxIcon.Exclamation);
+                switch (objDr)
+                {
+                    case DialogResult.Yes:
+                        SaveText(); // ÅØ½ºÆ® ÀúÀå
+                        this.Close(); // Á¾·á
+                        break;
+                    case DialogResult.No:
+                        this.Close(); // Á¾·á
+                        break;
+                    case DialogResult.Cancel:
+                        break;
+                }
+            }
+            else
+            {
+                this.Close(); // Application.Exit();
+            }
+        }
+
+        private void ½ÃÇèº¸±âToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string strDirectory = "C:\\Users\\ÀÌÃ¤¿µ\\source\\repos\\WindowsFormsApp5\\WindowsFormsApp5\\bin\\Debug\\·£´ýÄûÁî.exe"; //ÇÁ·ÎÁ§Æ®¡¢Æú´õ°¡ÀÖ´Â À§Ä¡·Î ¹Ù²ãÁà¾ßÁ¤»ó ½ÇÇàµÊ
+            if (System.IO.File.Exists(strDirectory))
+            {
+                System.Diagnostics.Process.Start("explorer.exe", strDirectory);
+                //    System.Diagnostics.Process.Start("explorer.exe", "http://www.naver.com"); 
+            }
+            else
+            {
+                MessageBox.Show(strDirectory + " ÆÄÀÏÀÌ ¾ø½À´Ï´Ù.", "¸Þ¸ðÀå",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void °¡À§¹ÙÀ§º¸ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string strDirectory = "C:\\Users\\ÀÌÃ¤¿µ\\source\\repos\\WindowsFormsApp5\\WindowsFormsApp5\\bin\\Debug\\°¡À§¹ÙÀ§º¸.exe"; //ÇÁ·ÎÁ§Æ®¡¢Æú´õ°¡ÀÖ´Â À§Ä¡·Î ¹Ù²ãÁà¾ßÁ¤»ó ½ÇÇàµÊ
+            if (System.IO.File.Exists(strDirectory))
+            {
+                System.Diagnostics.Process.Start("explorer.exe", strDirectory);
+                //    System.Diagnostics.Process.Start("explorer.exe", "http://www.naver.com"); 
+            }
+            else
+            {
+                MessageBox.Show(strDirectory + " ÆÄÀÏÀÌ ¾ø½À´Ï´Ù.", "¸Þ¸ðÀå",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+    }
+}
+--------------------------------------------------------------------------------
+[³­¼ö Áßº¹Á¦°Å]
+            int i, j;
+            int[] hap = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+            for (i = 0; i < 10; i++)
+            {
+                Console.Write("¼ýÀÚ 0ºÎÅÍ 9»çÀÌ °ª 10°³ ÀÔ·Â : ");
+                int s = Convert.ToInt32(Console.ReadLine());
+                for (j = 0; j < 9; j++)
+                {
+                    if (s == j)
+                        hap[j] = hap[j] + 1;
+                }
+            }
+            Console.Write("ÀÔ·Â°ª   ºóµµ¼ö\n");
+            for (i = 0; i < 10; i++)
+            {
+                Console.Write("{0}     {1}\n", i, hap[i]);
+            }
+
+            List<int> numberlist = new List<int>();
+
+            Random random = new Random();
+
+            //¼ýÀÚµéÀ» ¼ø¼­´ë·Î ´ã½À´Ï´Ù. 
+
+            for (int number = 1; number <= 10; number++)
+
+            {
+
+                numberlist.Add(number);
+
+            }
+
+            //ÇÏ³ª¾¿ ²¨³»¼­ Ãâ·ÂÇÕ´Ï´Ù. 
+
+            for (int maxIndex = 9; maxIndex >= 1; maxIndex--)
+
+            {
+
+                //²¨³¾ À§Ä¡¸¦ 0ºÎÅÍ 9¿¡¼­  ·£´ýÀ¸·Î Ã³¸®ÇÕ´Ï´Ù. 
+
+                int index = random.Next(0, maxIndex);
+
+                //Ãâ·ÂÇÕ´Ï´Ù. 
+
+                Console.Write(numberlist[index] + " ");
+
+                //¸®½ºÆ®¿¡¼­ Áö¿ó´Ï´Ù. 
+
+                numberlist.RemoveAt(index);
+
+            }
+
+            //¸¶Áö¸· ³²Àº ¼ýÀÚ¸¦ Ãâ·ÂÇÕ´Ï´Ù. 
+
+            Console.WriteLine(numberlist[0]);
+
+            Random rd = new Random();
+
+            int[] a = new int[10];
+
+            for (int i = 0; i < 10; i++)
+
+            {
+
+                a[i] = rd.Next(1, 11);
+
+
+
+            }
+
+            Console.WriteLine(); //ºó ¹®ÀÚ¿­À» Á¦°ÅÇÏ¿´½À´Ï´Ù. 
+
+            for (int i = 0; i < 9; i++)
+
+            {
+
+                for (int j = i + 1; j < 10; j++) // 
+
+                {
+
+                    while (a[i] == a[j])
+                    {
+                        int number = rd.Next(1, 11);
+
+                        ¹è¿­ a¿¡ »õ·Î »ý¼ºÇÑ ³­¼ö°¡ ÀÖÀ¸¸é ´Ù½Ã while¹®À» ÁøÇàÇÕ´Ï´Ù.
+                                if (Array.IndexOf(a, number) > -1) continue;
+
+                        a[j] = number; // ³­¼ö¸¦ ÀúÀåÇÕ´Ï´Ù. 
+
+
+                    }
+
+                }
+
+            }
+
+            Console.WriteLine(); //°ø¹é¹®ÀÚ¿­À» Á¦°ÅÇÏ¿´½À´Ï´Ù. 
+
+            for (int i = 0; i < 10; i++) //i¸¦ 10º¸´Ù ÀÛÀº °æ¿ì·Î ¹Ù²å½À´Ï´Ù. 
+
+            {
+
+                Console.Write(a[i] + " ");
+
+            }
+
+-------------------------------------------------------------------------------
+[È¸¿ø°¡ÀÔ]
+using System;
+
+using System.Collections.Generic;
+
+using System.ComponentModel;
+
+using System.Data;
+
+using System.Drawing;
+
+using System.Linq;
+
+using System.Text;
+
+using System.Windows.Forms;
+
+ 
+
+namespace WindowsFormsTest
+
+{
+
+       public partial class È¸¿ø°¡ÀÔ : Form
+
+       {
+
+             public È¸¿ø°¡ÀÔ()
+
+             {
+
+                    InitializeComponent();
+
+             }
+
+ 
+
+             private void È¸¿ø°¡ÀÔ_Load(object sender, EventArgs e)
+
+             {
+
+                    comboBoxJob.SelectedIndex = 0;
+
+             }
+
+ 
+
+             private void button1_Click(object sender, EventArgs e)
+
+             {
+
+                    IdCheck id = new IdCheck();
+
+                    id.Owner = this;
+
+                    id.ShowDialog();
+
+             }
+
+ 
+
+             private void button2_Click(object sender, EventArgs e)
+
+             {
+
+                    Address address = new Address();
+
+                    address.Owner = this;
+
+                    address.ShowDialog();
+
+             }
+
+ 
+
+             private void button5_Click(object sender, EventArgs e)
+
+             {
+
+                    if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+
+                    {
+
+                           pictureBox1.Image = new Bitmap(openFileDialog1.FileName);
+
+                    }
+
+             }
+
+ 
+
+             private void button3_Click(object sender, EventArgs e)
+
+             {
+
+                    //µî·ÏÇÏ±â
+
+                    //1. ¾ÆÀÌµð °Ë»ç Á¾·áµÇ¸é.. textBoxID.Text°ªÀÌ Á¸Àç 0
+
+                    if (this.textBoxID.Text == string.Empty)
+
+                    {
+
+                           MessageBox.Show("¾ÆÀÌµð Áßº¹°Ë»ç¸¦ ÇÏ¼¼¿ä!!");
+
+                           //Á¾·á - ¸Þ¼­µå¸¦ Á¾·á
+
+                           return;
+
+                    }
+
+ 
+
+                    //2. ÀÌ¸§ : ÇÑ±Û 2~5ÀÚÀÌ³»
+
+                    if (this.textBoxName.Text.Length < 2 || this.textBoxName.TextLength > 5)
+
+                    {
+
+                           MessageBox.Show("ÀÌ¸§Àº 2~5ÀÚ ÀÌ³»");
+
+                           this.textBoxName.Focus();
+
+                           return;
+
+                    }
+
+ 
+
+                    //2.1 ÀÌ¸§ : ÇÑ±Û
+
+                    for (int i = 0; i < this.textBoxName.TextLength; i++)
+
+                    {
+
+                           char c = this.textBoxName.Text[i];
+
+                           if (c < '°¡' || c > 'ÆR')
+
+                           {
+
+                                 MessageBox.Show("ÀÌ¸§Àº ¹Ýµå½Ã ÇÑ±Û·Î");
+
+                                 this.textBoxName.Focus();
+
+                                 return;
+
+                           }
+
+                    }
+
+ 
+
+                    //3. ºñ¹Ð¹øÈ£
+
+                    if (this.textBoxPwd.TextLength < 4 || this.textBoxPwd.TextLength > 12)
+
+                    {
+
+                           MessageBox.Show("ºñ¹Ð¹øÈ£´Â 4~12ÀÚ ÀÌ³»");
+
+                           this.textBoxPwd.Focus();
+
+                           return;
+
+                    }
+
+ 
+
+                    if (this.textBoxPwdCfm.TextLength < 4 || this.textBoxPwdCfm.TextLength > 12)
+
+                    {
+
+                           MessageBox.Show("ºñ¹Ð¹øÈ£È®ÀÎÀº 4~12ÀÚ ÀÌ³»");
+
+                           this.textBoxPwd.Focus();
+
+                           return;
+
+                    }
+
+ 
+
+                    if (this.textBoxPwd.Text != this.textBoxPwdCfm.Text)
+
+                    {
+
+                           MessageBox.Show("ºñ¹Ð¹øÈ£°ªÀ» ´Ù½Ã È®ÀÎ ÇÏ¼¼¿ä");
+
+                           this.textBoxPwd.Focus();
+
+                           return;
+
+                    }
+
+ 
+
+                    //Á÷¾÷ - ¼±ÅÃÇÏ¼¼¿ä(±âº»°ª) ÀÌ¿ÜÀÇ ¼±ÅÃ ÇÊ¼ö
+
+                    if (comboBoxJob.SelectedIndex == 0)
+
+                    {
+
+                           MessageBox.Show("Á÷¾÷À» ¼±ÅÃÇÏ¼¼¿ä");
+
+                           this.comboBoxJob.Focus();
+
+                           return;
+
+                    }
+
+ 
+
+                    //»çÁø Ã·ºÎ?
+
+                    if (pictureBox1.Image == null)
+
+                    {
+
+                           MessageBox.Show("»çÁøÀ» Ã·ºÎÇÏ¼Å¾ß µË´Ï´Ù.");
+
+                           return;
+
+                    }
+
+ 
+
+ 
+
+ 
+
+                    //ÀÌ°÷±îÁö µµÂøÇÏ¸é..È¸¿ø°¡ÀÔ Ã³¸®!!
+
+                    MessageBox.Show("È¸¿ø°¡ÀÔ ¼º°ø!!");
+
+             }
+
+ 
+
+             private void textBoxJumin1_KeyUp(object sender, KeyEventArgs e)
+
+             {
+
+                    //¾ÕÀÚ¸® 6ÀÚ¸® Áß ¸¶Áö¸· ¼ýÀÚ¸¦ ÀÔ·ÂÇÒ ‹š
+
+                    if (this.textBoxJumin1.Text.Length == 6)
+
+                    {
+
+                           //1. µÞÀÚ¸® ÅØ½ºÆ®¹Ú½º·Î Æ÷Ä¿½º
+
+                           this.textBoxJumin2.Focus();
+
+ 
+
+                           //2. »ý³â, ¿ù, ÀÏ
+
+                           this.textBoxYear.Text = "19" + this.textBoxJumin1.Text.Substring(0, 2);
+
+                           this.textBoxMonth.Text = this.textBoxJumin1.Text.Substring(2, 2);
+
+                           this.textBoxDay.Text = this.textBoxJumin1.Text.Substring(4, 2);
+
+                    }
+
+             }
+
+ 
+
+             private void textBoxJumin2_KeyUp(object sender, KeyEventArgs e)
+
+             {
+
+                    //µÞÀÚ¸® Áß Ã¹¹ø¤Š ¼ýÀÚ¸¦ ÀÔ·ÂÇßÀ»¶§..
+
+                    if (textBoxJumin2.Text.Length == 1)
+
+                    {
+
+                           int num = int.Parse(textBoxJumin2.Text);
+
+ 
+
+                           if (num % 2 == 1)
+
+                                 radioButtonM.Checked = true;
+
+                           else
+
+                                 radioButtonF.Checked = true;
+
+                    }
+
+                    
+
+             }
+
+       }
+
+}
+
+
