@@ -32,3 +32,8 @@ class car {
         System.out.println("Color : " + Color + " Speed : " + Speed + " Gear : " + Gear);
     }
 }
+/* 객체 생성 과정
+1. new 연산자가 c 객체에 저장될 메모리 공간 할당
+2. 생성자가 c 객체를 초기화
+3. new 연산자가 새로 생성된 객체의 주소(reference) c 변수에 저장
+4. c를 통해 car 에 접근 가능 */
